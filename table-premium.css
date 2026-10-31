@@ -1,0 +1,196 @@
+/* Sales Update: table-first presentation refresh. No business logic. */
+html:root{--r-card:20px;--border:#e3eaf2;--border-soft:#edf2f7;--text-main:#182b43;--text-secondary:#65788e;--cyan:#14b8a6}
+body.mv{background-color:#f2f6fa;background-image:none}
+body.mv main{gap:22px}
+body.mv .card{box-shadow:0 5px 24px -14px #243c5c30;border-color:#e3eaf2}
+body.mv .section-title{font-size:11px;letter-spacing:.09em;margin-top:25px;margin-bottom:10px;color:#486078}
+body.mv .table-wrap{border:1px solid #dce5ef;border-radius:16px;background:#fff;box-shadow:0 6px 24px -17px #233c6055;margin-top:10px;scrollbar-width:thin;scrollbar-color:#b9c9d9 #f3f7fb;isolation:isolate}
+body.mv .table-wrap table{border-collapse:separate;border-spacing:0;font-size:12.5px;font-variant-numeric:tabular-nums lining-nums}
+body.mv .table-wrap th,body.mv .table-wrap td,body.mv table.pv th,body.mv table.pv td{padding:13px 15px;line-height:1.45;border-bottom:1px solid #edf2f7}
+body.mv .table-wrap thead th,body.mv .table-wrap thead td,body.mv .table-wrap thead th:not(.bu),body.mv #tvTable thead th,body.mv #catTable thead th{background:#162b43;color:#dce8f4;font-size:10px;font-weight:700;letter-spacing:.055em;border-bottom:1px solid #30445c;vertical-align:middle;white-space:normal;min-width:76px}
+body.mv .table-wrap thead tr:not(:first-child) th{background:#eef3f8!important;color:#50667e!important;border-bottom:1px solid #d9e3ee}
+body.mv .table-wrap thead th.bu,body.mv #tvTable thead th.bu,body.mv #catTable thead th.bu{background:#123e50;color:#a6f0e5;font-size:11px;letter-spacing:.07em;border-left:4px solid #f2f6fa}
+body.mv .table-wrap thead th.bu.tot,body.mv #tvTable thead th.bu.tot,body.mv #catTable thead th.bu.tot{background:#0e273b;color:white}
+body.mv .table-wrap thead th[data-table-tone="beauty"]{background:#603d80!important;color:#f0e2ff!important}
+body.mv .table-wrap thead th[data-table-tone="personal"]{background:#18533f!important;color:#d0f9e4!important}
+body.mv .table-wrap thead th[data-table-tone="home"]{background:#1e4b70!important;color:#dceeff!important}
+body.mv .table-wrap thead th[data-table-tone="foods"]{background:#7a4c20!important;color:#fff0d5!important}
+body.mv .table-wrap tbody td{color:#334b63;vertical-align:middle;transition:background-color .15s}
+body.mv .table-wrap tbody tr:nth-child(even)>td{background-color:#f8fafc}
+body.mv .table-wrap tbody tr:hover>td{background-color:#edf8f8!important}
+body.mv .table-wrap tbody tr.sel>td{background-color:#e1f5f1!important;border-bottom-color:#b9e4d9}
+body.mv .table-wrap tbody tr:last-child>td{border-bottom:0}
+body.mv .table-wrap td.n,body.mv .table-wrap th.n{text-align:right}
+body.mv .table-wrap td.c,body.mv .table-wrap th.c{text-align:center}
+body.mv .table-wrap tbody td:first-child{font-weight:600;color:#233c55}
+body.mv .table-wrap td.tot{background-color:#f0f5fa;font-weight:700}
+body.mv .table-wrap .gs{border-left:4px solid #f2f6fa}
+body.mv .table-wrap tfoot td,body.mv #tvTable tfoot .sk1,body.mv #catTable tfoot .sk1,body.mv #pageStock tr.sd-tot td{background:#e8f5f2;color:#164d46;font-weight:800;border-top:2px solid #36b7a4;border-bottom:0;padding-top:15px;padding-bottom:15px}
+body.mv #tvTable tbody .sk1,body.mv #tvTable tbody .sk2,body.mv #catTable tbody .sk1,body.mv #catTable tbody .sk2{background-color:#fff}
+body.mv #tvTable tbody tr:nth-child(even) .sk1,body.mv #tvTable tbody tr:nth-child(even) .sk2,body.mv #catTable tbody tr:nth-child(even) .sk1,body.mv #catTable tbody tr:nth-child(even) .sk2{background-color:#f8fafc}
+body.mv #tvTable thead .sk1,body.mv #tvTable thead .sk2,body.mv #catTable thead .sk1,body.mv #catTable thead .sk2{background:#162b43;color:#dce8f4}
+body.mv .table-wrap th.sortable,body.mv .table-wrap th[class*="-sort"]{cursor:pointer}
+body.mv .table-wrap th.sortable:hover,body.mv .table-wrap th[class*="-sort"]:hover{filter:brightness(1.13)}
+body.mv .table-wrap th.asc,body.mv .table-wrap th.desc{box-shadow:inset 0 -3px #35c5b0}
+body.mv .table-wrap .pc,body.mv #allocCard .al-pc,body.mv #iqCard .iq-pc{display:inline-block;min-width:61px;text-align:center;border-radius:7px;padding:4px 8px;font-size:11px;font-weight:750}
+body.mv .table-wrap .pc.Green,body.mv .table-wrap .st.Green{background:#e1f4ec;color:#167653}
+body.mv .table-wrap .pc.Red,body.mv .table-wrap .st.Red{background:#fff0f0;color:#b94a58}
+body.mv .table-wrap .st{font-size:10px;padding:4px 10px;letter-spacing:.02em}
+body.mv .table-wrap td[data-table-zero]{font-size:0!important}
+body.mv .table-wrap td[data-table-zero]::after{content:'\2013';font-size:12px;color:#91a2b4}
+body.mv .table-wrap td[data-table-icon]{background-image:var(--table-icon);background-repeat:no-repeat;background-position:14px center;background-size:27px 27px;padding-left:51px!important;min-height:42px}
+body.mv td[data-table-icon="beauty"]{--table-icon:url('icons/bu_beauty.png')}
+body.mv td[data-table-icon="personal"]{--table-icon:url('icons/bu_personal.png')}
+body.mv td[data-table-icon="home"]{--table-icon:url('icons/bu_home.png')}
+body.mv td[data-table-icon="foods"]{--table-icon:url('icons/bu_foods.png')}
+body.mv td[data-table-icon="cooking"]{--table-icon:url('icons/cat_cookingaids.png')}
+body.mv td[data-table-icon="fabric"]{--table-icon:url('icons/cat_fabriccleaning.png')}
+body.mv td[data-table-icon="hair"]{--table-icon:url('icons/cat_haircare.png')}
+body.mv td[data-table-icon="hygiene"]{--table-icon:url('icons/cat_homehygiene.png')}
+body.mv td[data-table-icon="nutrition"]{--table-icon:url('icons/cat_lifestylenutrition.png')}
+body.mv td[data-table-icon="oral"]{--table-icon:url('icons/cat_oralcare.png')}
+body.mv td[data-table-icon="skin"]{--table-icon:url('icons/cat_skincare.png')}
+body.mv td[data-table-icon="cleansing"]{--table-icon:url('icons/cat_skincleansing.png')}
+body.mv .stats>.stat,body.mv .sd-kpis>.stat{border-radius:16px}
+body.mv .filter-slot,body.mv .modebar{background:#f8fafc;border-color:#e3eaf2}
+@media(min-width:641px){body.mv table.grid8,body.mv table.eq{table-layout:auto;min-width:850px}body.mv .table-wrap td.rowlab{background-color:#f0f5fa;font-size:11px}}
+@media(max-width:640px){
+ body.mv .m-cards{box-shadow:none!important;border:0!important;border-radius:0;background:transparent}
+ body.mv .m-cards tr{border:1px solid #e1e8f0;border-left:3px solid #cbd9e7;border-radius:16px;padding:16px!important;gap:13px 16px;background:#fff;box-shadow:0 5px 18px -13px #233c6040;margin-bottom:12px}
+ body.mv .m-cards tbody td,body.mv .m-cards tbody tr:nth-child(even)>td,body.mv .m-cards tbody tr:hover>td{background-color:transparent!important}
+ body.mv .m-cards td{font-size:13px;line-height:1.5}
+ body.mv .m-cards td::before{font-size:9px;letter-spacing:.065em;color:#8293a5;margin-bottom:4px}
+ body.mv .m-cards td.m-title{font-size:15px;padding-bottom:10px!important;color:#1d354e}
+ body.mv .m-cards td[data-table-icon]{background-image:var(--table-icon)!important;background-size:28px 28px;background-position:left top;padding-left:39px!important;min-height:30px}
+ body.mv .m-cards td[data-table-zero]{font-size:0!important}
+ body.mv .m-cards td[data-table-zero]::before{font-size:9px}
+ body.mv .m-cards td[data-table-zero]::after{font-size:13px}
+ body.mv .m-cards tfoot tr{background:#15394a;border-color:#15394a;border-left-color:#31c6ad}
+ body.mv .m-cards tfoot td{background:transparent!important;border-top:0;padding:0;color:#fff}
+ body.mv .m-grouped td.m-ghead{background:#eef4f8!important;color:#375a73;padding:7px 9px!important;border-radius:7px;margin-top:8px}
+ body.mv .table-wrap:not(.m-cards){border-radius:12px}
+}
+@media(prefers-reduced-motion:reduce){body.mv .table-wrap td{transition:none}}
+
+/* Header contrast repair: includes frozen first-column and sorted headers. */
+body.mv .table-wrap table thead th:hover,
+body.mv .table-wrap table thead th:focus-visible,
+body.mv .table-wrap table thead th.sortable:hover,
+body.mv .table-wrap table thead th[class*="-sort"]:hover,
+body.mv #tvTable thead th:hover,
+body.mv #catTable thead th:hover {
+ background:#25465f!important;background-color:#25465f!important;
+ color:#fff!important;filter:none!important;
+}
+body.mv .table-wrap table thead th:hover *,
+body.mv .table-wrap table thead th:hover::after {color:#fff!important}
+body.mv .table-wrap table thead tr:not(:first-child) th:hover {
+ background:#dcebf1!important;color:#16384d!important;
+}
+body.mv .table-wrap table thead tr:not(:first-child) th:hover *,
+body.mv .table-wrap table thead tr:not(:first-child) th:hover::after {color:#16384d!important}
+/* Landing-only atmosphere. CSS artwork: no external image downloads. */
+body.mv:not(.mv-nav-on) {
+ background-color:#080f1b;
+ background-image:radial-gradient(ellipse at 12% 25%,#104455 0,transparent 48%),radial-gradient(ellipse at 88% 85%,#172e61 0,transparent 50%),linear-gradient(135deg,#08111b,#0d1828);
+ background-attachment:fixed;
+}
+body.mv:not(.mv-nav-on)::before {
+ content:"";position:fixed;inset:64px 0 0;pointer-events:none;z-index:0;
+ background-image:linear-gradient(#8ed6e608 1px,transparent 1px),linear-gradient(90deg,#8ed6e608 1px,transparent 1px);
+ background-size:56px 56px;
+ mask-image:linear-gradient(180deg,transparent,#000 25%,#000 75%,transparent);
+}
+body.mv:not(.mv-nav-on)::after {
+ content:"";position:fixed;width:min(65vw,850px);height:min(65vw,850px);right:-20vw;bottom:-42vw;
+ border:1px solid #51d6dd26;border-radius:50%;pointer-events:none;z-index:0;
+ box-shadow:0 0 0 65px #51d6dd06,0 0 0 130px #51d6dd05,0 0 0 195px #51d6dd04;
+}
+body.mv:not(.mv-nav-on) main {position:relative;z-index:1;min-height:calc(100svh - 64px);justify-content:center;padding-top:40px;padding-bottom:70px}
+body.mv:not(.mv-nav-on) #viewCard {margin:0 auto;max-width:680px;border:1px solid #7dd6e52b;background-color:#0b1421;box-shadow:0 35px 90px #0007,0 0 70px #14b8a610}
+body.mv:not(.mv-nav-on) .topbar {background:#0a1421e8;border-bottom-color:#ffffff12;color:#fff}
+body.mv:not(.mv-nav-on) .topbar .mv-t {color:#eaf4ff}
+body.mv:not(.mv-nav-on) .topbar .mv-s {color:#a1b5c9}
+@media(max-width:640px){body.mv:not(.mv-nav-on) main{min-height:calc(100svh - 58px);padding:28px 14px 50px}body.mv:not(.mv-nav-on)::before{inset:58px 0 0;background-size:38px 38px}body.mv:not(.mv-nav-on)::after{width:95vw;height:95vw;bottom:-55vw;right:-40vw}}
+
+/* Keep existing stock icons; never layer a decorative icon over one. */
+body.mv .table-wrap td[data-table-icon]:has(img),
+body.mv .table-wrap td[data-table-icon]:has(svg),
+body.mv .table-wrap td[data-table-icon]:has(.sd-name){background-image:none!important;padding-left:15px!important}
+@media(max-width:640px){body.mv .m-cards td[data-table-icon]:has(img),body.mv .m-cards td[data-table-icon]:has(svg),body.mv .m-cards td[data-table-icon]:has(.sd-name){padding-left:0!important}}
+
+/* ---- Dropdown lists (select popups) -------------------------------------------------
+   Cause of the invisible items: the filter bars use WHITE select text on a dark bar, and
+   the popup list inherited that white onto a light popup, so items only showed on hover.
+   Fix: give every option explicit colours. Dark bars -> dark list; login + report filters keep their existing light list (theme.css). */
+body.mv select option,
+body.mv select optgroup{background-color:#fff;color:#172033}
+body.mv select option:disabled{color:#8a98aa}
+
+body.mv #orderCard .od-bar select option,
+body.mv #creditCard .cn-bar select option,
+body.mv #allocCard .al-bar select option,
+body.mv #iqCard .iq-bar select option,
+body.mv #orderCard .od-bar select optgroup,
+body.mv #creditCard .cn-bar select optgroup,
+body.mv #allocCard .al-bar select optgroup,
+body.mv #iqCard .iq-bar select optgroup{background-color:#14233a;color:#f1f6fb}
+
+body.mv #orderCard .od-bar select option:checked,
+body.mv #creditCard .cn-bar select option:checked,
+body.mv #allocCard .al-bar select option:checked,
+body.mv #iqCard .iq-bar select option:checked,
+body.mv #orderCard .od-bar select option:hover,
+body.mv #creditCard .cn-bar select option:hover,
+body.mv #allocCard .al-bar select option:hover,
+body.mv #iqCard .iq-bar select option:hover{background-color:#1f8f86;color:#fff}
+
+body.mv #orderCard .od-bar select option:disabled,
+body.mv #creditCard .cn-bar select option:disabled,
+body.mv #allocCard .al-bar select option:disabled,
+body.mv #iqCard .iq-bar select option:disabled{color:#7d8da3}
+
+/* =====================================================================================
+   1) Payout > Pending table: narrow Route / Outlet / Order Booker, wide payout column,
+      compact rows -> more rows visible at once.  Desktop/tablet only (phones use cards).
+   ===================================================================================== */
+@media(min-width:641px){
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]){width:100%}
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) :is(th,td){padding:8px 10px;line-height:1.35}
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) thead th{min-width:0;padding-top:10px;padding-bottom:10px}
+  /* Header + body cells only (the TOTAL row has merged cells).
+    Phone / Today's order / Notes / Pending / Oldest: shrink to their content */
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) thead th:is(:nth-child(3),:nth-child(5),:nth-child(7),:nth-child(8),:nth-child(9)),
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) tbody td:is(:nth-child(3),:nth-child(5),:nth-child(7),:nth-child(8),:nth-child(9)){width:1%}
+ /* Route / Outlet / Order Booker: fixed narrow widths, long text wraps */
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) :is(thead th,tbody td):nth-child(1){width:105px;min-width:105px;max-width:105px}
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) :is(thead th,tbody td):nth-child(2){width:190px;min-width:190px;max-width:190px}
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) :is(thead th,tbody td):nth-child(4){width:140px;min-width:140px;max-width:140px}
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) tbody td:is(:nth-child(1),:nth-child(2),:nth-child(4)){white-space:normal;overflow-wrap:anywhere}
+ /* Sales Return / Payout Program: takes ALL the remaining width */
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) thead th:nth-child(6),
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) tbody td:nth-child(6){width:auto;min-width:300px;max-width:none}
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) tbody td:nth-child(6){white-space:normal}
+ body.mv #creditCard table.cn-tbl:has(th[data-t="cnPend"]) tfoot td{padding-top:10px;padding-bottom:10px}
+}
+
+/* =====================================================================================
+   2) Floating horizontal-scroll control (outside the tables). Shown only while a table
+      in view is wider than its box. Built by table-premium.js.
+   ===================================================================================== */
+#tsDock{position:fixed;left:50%;bottom:22px;z-index:62;display:flex;align-items:center;gap:10px;padding:6px 8px;border-radius:999px;
+  background:#0f1d2e;border:1px solid rgba(125,214,229,.32);box-shadow:0 16px 38px -12px rgba(2,10,22,.65),0 0 0 4px rgba(20,184,166,.10);
+  transform:translate(-50%,14px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,transform .18s,visibility .18s;user-select:none;-webkit-user-select:none;touch-action:none}
+#tsDock.on{transform:translate(-50%,0);opacity:1;visibility:visible;pointer-events:auto}
+#tsDock .ts-b{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:#1a3250;color:#dff7f3;display:grid;place-items:center;padding:0;cursor:pointer;
+  transition:background-color .15s,transform .1s,opacity .15s}
+#tsDock .ts-b svg{width:18px;height:18px;display:block}
+#tsDock .ts-b:hover:not(:disabled){background:#1f8f86;border-color:#4fd4c6}
+#tsDock .ts-b:active:not(:disabled){transform:scale(.93)}
+#tsDock .ts-b:disabled{opacity:.32;cursor:default}
+#tsDock .ts-b:focus-visible{outline:2px solid #5eead4;outline-offset:2px}
+#tsDock .ts-track{position:relative;width:78px;height:6px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden}
+#tsDock .ts-thumb{position:absolute;top:0;bottom:0;left:0;width:40%;border-radius:99px;background:linear-gradient(90deg,#2dd4bf,#38bdf8)}
+@media(max-width:640px){#tsDock{bottom:16px;gap:8px}#tsDock .ts-b{width:44px;height:44px}#tsDock .ts-track{width:56px}}
+@media(prefers-reduced-motion:reduce){#tsDock{transition:none}}
+@media print{#tsDock{display:none!important}}

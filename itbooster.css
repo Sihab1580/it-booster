@@ -1,0 +1,145 @@
+/* =============================================================================
+ *  IT BOOSTER — corporate BLUE + WHITE theme
+ *  Presentation only. Loaded LAST (after theme.css / table-premium.css).
+ *  No ids, markup, logic or calculations are touched.
+ *  To go back to the old look: remove <link href="itbooster.css"> from index.html.
+ * ============================================================================= */
+
+/* ------------------------------------------------------------- tokens ------ */
+html:root{
+  --navy:#0A2A6B; --navy-2:#0F3A8F; --royal:#1D4ED8; --blue:#2563EB; --blue-d:#1E40AF; --sky:#3B82F6;
+  --ice:#EFF5FF; --ice-2:#E3EDFE; --ice-3:#D3E2FC;
+  --cyan:#2563EB; --deep-blue:#1E40AF; --violet:#2563EB; --amber:#F59E0B;
+  --bg-main:#F3F7FD; --bg:#F3F7FD; --surface:#fff; --surface-soft:#F7FAFF; --tint:#EFF5FF;
+  --text-main:#0F1F3D; --ink:#0F1F3D; --text-secondary:#5B6B88; --muted:#5B6B88; --text-muted:#8A97B1;
+  --border:#DCE6F5; --line:#DCE6F5; --border-soft:#EAF0FA;
+  --sidebar:#0A2A6B; --sidebar-border:rgba(255,255,255,.10);
+  --info:#1E40AF; --info-bg:#EAF1FF;
+  --r-card:16px;
+}
+body.mv{background:#F3F7FD!important;color:var(--text-main)}
+body.mv *:focus-visible{outline:2px solid #2563EB;outline-offset:2px}
+body.mv ::selection{background:#BFD4FB;color:#0A2A6B}
+
+/* ---------------------------------------------------------- sidebar --------- */
+#mvSide{background:linear-gradient(180deg,#0A2A6B 0%,#0C3380 55%,#0F3A8F 100%)!important;border-right:none;box-shadow:6px 0 24px -12px rgba(10,42,107,.45)}
+#mvSide .mvs-glow{background:radial-gradient(120% 45% at 0% 0%,rgba(96,165,250,.28),transparent 62%),radial-gradient(100% 40% at 100% 100%,rgba(255,255,255,.07),transparent 65%)!important}
+#mvSide .mvs-brand{border-bottom:1px solid rgba(255,255,255,.12);padding:22px 20px 18px}
+#mvSide .mvs-logo,.mv-logo{background:#fff!important;color:#1D4ED8!important;box-shadow:0 8px 20px -8px rgba(0,0,0,.45)!important;border-radius:12px}
+#mvSide h1{color:#fff;font-weight:800;letter-spacing:.08em;font-size:16px}
+#mvSide .mvs-bt small{color:#9DB8EE;letter-spacing:.04em}
+#mvSide .nav-btn,#mvSide .menu-btn{color:#C5D5F5}
+#mvSide .nav-btn:hover:not(:disabled),#mvSide .menu-btn:hover:not(:disabled){background:rgba(255,255,255,.10);color:#fff}
+#mvSide .nav-btn.active,#mvSide .nav-btn.active:hover:not(:disabled){background:#fff!important;color:#1E40AF!important;border-color:#fff!important;box-shadow:0 10px 22px -12px rgba(0,0,0,.5)!important;backdrop-filter:none}
+#mvSide .nav-btn.active .nic{color:#1D4ED8}
+#mvSide .nav-menu{border-left:1px solid rgba(255,255,255,.18)}
+#mvSide .nav-menu button{color:#C5D5F5}
+#mvSide .nav-menu button:hover:not(:disabled){background:rgba(255,255,255,.10);color:#fff}
+#mvSide .nav-menu button.active{background:rgba(255,255,255,.16)!important;color:#fff}
+#mvSide .mvs-foot{border-top:1px solid rgba(255,255,255,.12)}
+#mvSide .mvs-town{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.16)}
+#mvSide .mvs-town svg{color:#BFD4FB}
+#mvSide .mvs-town small{color:#9DB8EE}
+#mvSide .mvs-town b{color:#fff}
+#mvSide .menu-btn.signout:hover:not(:disabled){background:#fff;color:#1E40AF}
+
+/* ------------------------------------------------------------- header ------- */
+body.mv .topbar{background:rgba(255,255,255,.92);border-bottom:1px solid #DCE6F5;box-shadow:0 6px 20px -16px rgba(10,42,107,.35)}
+body.mv .topbar .mv-logo,body.mv-nav-on .topbar .mv-logo{background:linear-gradient(135deg,#2563EB,#1E40AF)!important;color:#fff!important}
+.mv-t{color:#0A2A6B;font-weight:800;letter-spacing:-.01em}
+.mv-s{color:#5B6B88}
+.mv-hamb{color:#1E40AF;background:#EFF5FF;border:1px solid #DCE6F5;box-shadow:none}
+.mv-hamb:hover{background:#E3EDFE;color:#0A2A6B}
+.mv-chip{background:#EFF5FF;border:1px solid #D3E2FC;box-shadow:none;color:#0A2A6B}
+.mv-chip svg{color:#2563EB}
+
+/* ------------------------------------------------------------ cards --------- */
+body.mv .card{border:1px solid #DCE6F5;border-radius:16px;box-shadow:0 1px 2px rgba(10,42,107,.04),0 10px 28px -20px rgba(10,42,107,.30)}
+body.mv .card h2{color:#0A2A6B}
+.mv-ic{background:#EAF1FF!important;color:#1D4ED8!important}
+body.mv .section-title,body.mv .subhead{color:#1E40AF;letter-spacing:.09em}
+body.mv .section-title::before{content:"";display:inline-block;width:4px;height:12px;border-radius:2px;background:#2563EB;margin-right:8px;vertical-align:-1px}
+body.mv .banner{background:#EFF5FF;border-color:#D3E2FC}
+body.mv .hint,body.mv .muted{color:#6B7A97}
+
+/* ------------------------------------------------- hero: login + report head */
+.mv-hero-bg,body.mv #viewCard,body.mv #reportHead{background:linear-gradient(135deg,#0A2A6B 0%,#1239A0 55%,#1D4ED8 100%)!important;color:#fff}
+body.mv #viewCard::before,body.mv #reportHead::before{background:radial-gradient(60% 90% at 0% 0%,rgba(96,165,250,.35),transparent 62%),radial-gradient(55% 90% at 100% 100%,rgba(255,255,255,.10),transparent 64%)!important}
+body.mv #viewCard{border:none!important;border-radius:24px;box-shadow:0 30px 60px -28px rgba(10,42,107,.65)}
+body.mv #reportHead{border-radius:20px;box-shadow:0 20px 40px -24px rgba(10,42,107,.6)}
+body.mv #viewCard h2,body.mv #reportHead .crumb{color:#fff}
+body.mv #reportHead .crumb span{color:rgba(255,255,255,.65)}
+body.mv #viewCard .mv-ic{background:rgba(255,255,255,.16)!important;color:#fff!important}
+body.mv #viewCard button.primary{background:#fff!important;color:#1E40AF!important;box-shadow:0 10px 24px -12px rgba(0,0,0,.5)!important}
+body.mv #viewCard button.primary:hover:not(:disabled){background:#EAF1FF!important;color:#0A2A6B!important}
+body.mv #viewCard .new-upload a{color:#CFE0FF}
+body.mv #viewCard .new-upload a:hover{color:#fff}
+body.mv #reportHead .chip{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.22)}
+body.mv #reportHead .filters button{background:#fff;color:#1E40AF;border-color:#fff}
+body.mv #reportHead .filters button:hover:not(:disabled){background:#EAF1FF;color:#0A2A6B}
+
+/* ---------------------------------------------------------- KPI cards ------- */
+body.mv .stat{--acc:#2563EB;border:1px solid #DCE6F5;border-radius:14px;box-shadow:0 1px 2px rgba(10,42,107,.04)}
+body.mv .stat:hover{box-shadow:0 14px 28px -18px rgba(10,42,107,.35)}
+body.mv .stat .k{color:#5B6B88}
+body.mv .stat .v{color:#0A2A6B}
+body.mv .stat.info{--acc:#2563EB}
+
+/* ------------------------------------------------------------ buttons ------- */
+body.mv button{border-color:#CBD8F0;color:#1E3A8A}
+body.mv button:hover:not(:disabled){border-color:#2563EB;color:#1D4ED8;background:#F5F9FF}
+body.mv button.primary{background:linear-gradient(135deg,#2563EB,#1E40AF);color:#fff;border-color:transparent;box-shadow:0 10px 20px -12px rgba(30,64,175,.8)}
+body.mv button.primary:hover:not(:disabled){background:linear-gradient(135deg,#3B82F6,#1D4ED8);color:#fff}
+body.mv select:focus,body.mv input:not([type=file]):focus{border-color:#2563EB;box-shadow:0 0 0 3px rgba(37,99,235,.16)}
+body.mv input[type=checkbox]{accent-color:#2563EB}
+
+/* ------------------------------------------- tabs / toggles / chips ---------- */
+body.mv #orderCard .od-tab.on,body.mv #creditCard .cn-tab.on,body.mv #allocCard .al-tab.on{color:#1E40AF;background:#EAF1FF;border-bottom-color:#2563EB}
+body.mv #orderCard .od-tg.on,body.mv #creditCard .cn-tg.on,body.mv #allocCard .al-tg.on{background:#2563EB;border-color:#2563EB;color:#fff}
+body.mv #orderCard .od-chip,body.mv #creditCard .cn-chip,body.mv #allocCard .al-chip,body.mv #pageStock .sd-chip.on{background:#EAF1FF;color:#1E40AF;border-color:#2563EB}
+body.mv .chip{background:#EAF1FF;color:#1E40AF}
+body.mv .pages,body.mv #pageStock .sd-grp{background:#EAF1FF}
+body.mv .pages button.active,body.mv #pageStock .sd-tg.on,body.mv .tab.active{background:#fff;color:#1E40AF}
+body.mv .tab.active{background:#EAF1FF}
+body.mv #orderCard .od-shr i,body.mv #allocCard .al-shr i,body.mv .bar-fill{background:#2563EB}
+body.mv #orderCard td.od-val,body.mv #allocCard td.al-val,body.mv #creditCard td.cn-val,body.mv #iqCard td.iq-val{color:#1E40AF}
+
+/* ------------------------------------------------------------- tables ------- */
+body.mv .table-wrap{border:1px solid #D3E2FC;border-radius:14px;box-shadow:0 10px 26px -20px rgba(10,42,107,.35)}
+body.mv .table-wrap thead th:not(.bu),body.mv th,body.mv thead td{background-color:#EAF1FF!important;color:#0A2A6B;border-bottom:2px solid #BFD4FB;font-weight:800}
+body.mv th.bu{background:#D3E2FC!important;color:#0A2A6B;border-left:1px solid #BFD4FB}
+body.mv th.bu.tot{background:#BFD4FB!important}
+body.mv tbody tr:hover td{background:#F3F8FF}
+body.mv tfoot td{background:#DCE8FD!important;color:#0A2A6B;border-top:2px solid #2563EB}
+body.mv th.sortable:hover,body.mv #orderCard th.od-sort:hover,body.mv #allocCard th.al-sort:hover,body.mv #creditCard th.cn-sort:hover,body.mv #iqCard th.iq-sort:hover{background:#D3E2FC!important}
+body.mv tr.sel td{background:#E3EDFE!important}
+body.mv #tvTable thead .sk1,body.mv #tvTable thead .sk2,body.mv #catTable thead .sk1,body.mv #catTable thead .sk2{background:#EAF1FF!important}
+body.mv #tvTable tfoot .sk1,body.mv #catTable tfoot .sk1{background:#DCE8FD!important}
+
+/* ------------------------------------------------- uploads / drop zones ------ */
+body.mv .drop{border:1.5px dashed #9DB8EE;background:#F7FAFF}
+body.mv .drop:hover,body.mv .drop.over{border-color:#2563EB;background:#EAF1FF}
+body.mv .drop-title{color:#0A2A6B}
+body.mv .bulk-drop{border-color:#7FA2E6;background:#F3F8FF}
+body.mv .bulk-drop.over,body.mv .bulk-drop:hover{border-color:#2563EB;background:#EAF1FF}
+body.mv .bulk-t{color:#1E40AF}
+
+/* ------------------------------------------------ overlay / drawer / misc ---- */
+body.mv .overlay{background:rgba(10,42,107,.45)}
+body.mv .spinner{border-color:#DCE6F5;border-top-color:#2563EB}
+body.mv .alert.info{background:#EAF1FF;color:#1E40AF;border-color:#C6D8F8}
+body.mv .drawer-head{background:#fff;border-bottom:1px solid #DCE6F5}
+body.mv a{color:#1D4ED8}
+
+/* ---------------------------------------------------------- small touches ---- */
+body.mv .mvs-scroll::-webkit-scrollbar,body.mv .table-wrap::-webkit-scrollbar{height:9px;width:9px}
+body.mv .table-wrap::-webkit-scrollbar-thumb{background:#B6C9EC;border-radius:8px}
+body.mv .table-wrap::-webkit-scrollbar-track{background:#F0F5FD}
+#tsDock{--ts-accent:#2563EB}
+@media (max-width:760px){
+  #mTop{background:#2563EB!important;box-shadow:0 6px 16px rgba(30,64,175,.4)!important}
+  body{background:#F3F7FD!important}
+  .m-cards tr{border-left-color:#BFD4FB}
+  .m-cards tfoot tr{background:#EAF1FF;border-color:#BFD4FB;border-left-color:#2563EB}
+  .m-cards td.m-title{color:#0A2A6B}
+}

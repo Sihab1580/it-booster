@@ -1,0 +1,54 @@
+/* Today's Order page — scoped to #allocCard */
+#allocCard .al-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+#allocCard .al-head h2{margin:0}
+#allocCard #orderMeta{font-size:13px;color:var(--muted)}
+#allocCard #orderMeta b{color:var(--blue-d)}
+#allocCard .al-bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:12px;padding:10px 12px;background:#fafbff;border:1px solid var(--line);border-radius:10px}
+#allocCard .al-bar label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:13px}
+#allocCard .al-bar select,#allocCard .al-bar input{font:inherit;padding:6px 9px;border:1px solid #c8cee0;border-radius:8px;background:#fff;max-width:230px}
+#allocCard .al-kpis{margin-top:12px}
+#allocCard .al-sub{font-size:11.5px;color:var(--muted);margin-top:3px;white-space:normal}
+#allocCard .al-tabs{display:flex;gap:4px;margin-top:16px;border-bottom:2px solid var(--line);align-items:flex-end}
+#allocCard .al-tab{border:none;background:transparent;font-weight:700;color:var(--muted);padding:9px 16px;border-radius:8px 8px 0 0;margin-bottom:-2px;border-bottom:2px solid transparent}
+#allocCard .al-tab.on{color:var(--blue-d);border-bottom-color:var(--blue);background:#eef1ff}
+#allocCard .al-badge{font-style:normal;background:var(--err);color:#fff;border-radius:999px;padding:0 7px;font-size:11px;margin-left:4px}
+#allocCard .al-spacer{flex:1}
+#allocCard .al-tabs #odExport{margin-bottom:6px}
+#allocCard .al-grp{display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-top:12px}
+#allocCard .al-tg{border:1px solid var(--line);background:#fff;font-weight:600;color:var(--muted);padding:6px 12px;border-radius:999px}
+#allocCard .al-tg.on{background:var(--blue);border-color:var(--blue);color:#fff}
+#allocCard .al-grp .hint{margin-left:8px}
+#allocCard .al-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+#allocCard .al-chip{background:#eef1ff;color:var(--blue-d);border-radius:999px;padding:4px 10px;font-size:12.5px}
+#allocCard .al-chip a{cursor:pointer;margin-left:4px;color:var(--err);font-weight:700}
+#allocCard th.al-sort{cursor:pointer;user-select:none}
+#allocCard th.al-sort:hover{background:#e3e8ff}
+#allocCard th.al-sort::after{content:"⇅";margin-left:4px;opacity:.35;font-size:10px}
+#allocCard th.al-sort.asc::after{content:"▲";opacity:1;color:var(--blue)}
+#allocCard th.al-sort.desc::after{content:"▼";opacity:1;color:var(--blue)}
+#allocCard tr.al-click{cursor:pointer}
+#allocCard td.al-val{font-weight:700;color:var(--blue-d)}
+#allocCard .muted{color:var(--muted);font-size:11.5px}
+#allocCard .al-shr{display:inline-block;width:46px;height:6px;background:#eef1ff;border-radius:3px;margin-right:6px;vertical-align:middle;overflow:hidden}
+#allocCard .al-shr i{display:block;height:100%;background:var(--blue)}
+#allocCard tr.al-st-short td{background:#fff3f2}
+#allocCard tr.al-st-transit td{background:#fffaeb}
+#allocCard td.neg{color:var(--err);font-weight:700}
+#allocCard tr.al-det td{background:#f7f8fe;white-space:normal}
+#allocCard .al-detbox{padding:6px 4px}
+#allocCard .al-detbox table{margin-top:6px;background:#fff}
+#allocCard .al-chartwrap{position:relative;height:280px;margin-top:14px}
+#allocCard .al-free{font-size:10px;font-weight:700;color:#5b34c7;background:#efe9ff;border-radius:4px;padding:1px 5px}
+#allocCard td.empty{text-align:center;color:var(--muted);padding:18px}
+@media(max-width:760px){#allocCard .al-bar label{width:100%}#allocCard .al-bar select{flex:1;max-width:none}}
+#allocCard .al-outlet{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:10px;padding:10px 14px;background:#f3fbf6;border:1px solid #a9dcbf;border-radius:10px;font-size:13px}
+#allocCard .al-outlet>b{font-size:14.5px;color:var(--blue-d)}
+#allocCard .al-pc{font-weight:700;border-radius:999px;padding:1px 8px;font-size:12px}
+#allocCard .al-pc.g{background:var(--ok-bg);color:var(--ok)}
+#allocCard .al-pc.a{background:var(--warn-bg);color:var(--warn)}
+#allocCard .al-pc.r{background:var(--err-bg);color:var(--err)}
+#allocCard .al-over{color:var(--ok);font-weight:700}
+#allocCard .al-warn{color:var(--warn);font-weight:700}
+#allocCard .al-plus{color:#5b34c7;font-weight:700}
+#allocCard td{white-space:nowrap}
+#allocCard .al-tbl td:first-child{white-space:normal;min-width:260px}

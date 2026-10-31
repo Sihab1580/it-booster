@@ -1,0 +1,46 @@
+/* Today's Order page — scoped to #orderCard */
+#orderCard .od-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+#orderCard .od-head h2{margin:0}
+#orderCard #orderMeta{font-size:13px;color:var(--muted)}
+#orderCard #orderMeta b{color:var(--blue-d)}
+#orderCard .od-bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:12px;padding:10px 12px;background:#fafbff;border:1px solid var(--line);border-radius:10px}
+#orderCard .od-bar label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:13px}
+#orderCard .od-bar select,#orderCard .od-bar input{font:inherit;padding:6px 9px;border:1px solid #c8cee0;border-radius:8px;background:#fff;max-width:230px}
+#orderCard .od-kpis{margin-top:12px}
+#orderCard .od-sub{font-size:11.5px;color:var(--muted);margin-top:3px;white-space:normal}
+#orderCard .od-tabs{display:flex;gap:4px;margin-top:16px;border-bottom:2px solid var(--line);align-items:flex-end}
+#orderCard .od-tab{border:none;background:transparent;font-weight:700;color:var(--muted);padding:9px 16px;border-radius:8px 8px 0 0;margin-bottom:-2px;border-bottom:2px solid transparent}
+#orderCard .od-tab.on{color:var(--blue-d);border-bottom-color:var(--blue);background:#eef1ff}
+#orderCard .od-badge{font-style:normal;background:var(--err);color:#fff;border-radius:999px;padding:0 7px;font-size:11px;margin-left:4px}
+#orderCard .od-spacer{flex:1}
+#orderCard .od-tabs #odExport{margin-bottom:6px}
+#orderCard .od-grp{display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-top:12px}
+#orderCard .od-tg{border:1px solid var(--line);background:#fff;font-weight:600;color:var(--muted);padding:6px 12px;border-radius:999px}
+#orderCard .od-tg.on{background:var(--blue);border-color:var(--blue);color:#fff}
+#orderCard .od-grp .hint{margin-left:8px}
+#orderCard .od-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+#orderCard .od-chip{background:#eef1ff;color:var(--blue-d);border-radius:999px;padding:4px 10px;font-size:12.5px}
+#orderCard .od-chip a{cursor:pointer;margin-left:4px;color:var(--err);font-weight:700}
+#orderCard th.od-sort{cursor:pointer;user-select:none}
+#orderCard th.od-sort:hover{background:#e3e8ff}
+#orderCard th.od-sort::after{content:"⇅";margin-left:4px;opacity:.35;font-size:10px}
+#orderCard th.od-sort.asc::after{content:"▲";opacity:1;color:var(--blue)}
+#orderCard th.od-sort.desc::after{content:"▼";opacity:1;color:var(--blue)}
+#orderCard tr.od-click{cursor:pointer}
+#orderCard td.od-val{font-weight:700;color:var(--blue-d)}
+#orderCard .muted{color:var(--muted);font-size:11.5px}
+#orderCard .od-shr{display:inline-block;width:46px;height:6px;background:#eef1ff;border-radius:3px;margin-right:6px;vertical-align:middle;overflow:hidden}
+#orderCard .od-shr i{display:block;height:100%;background:var(--blue)}
+#orderCard tr.od-st-short td{background:#fff3f2}
+#orderCard tr.od-st-transit td{background:#fffaeb}
+#orderCard td.neg{color:var(--err);font-weight:700}
+#orderCard tr.od-det td{background:#f7f8fe;white-space:normal}
+#orderCard .od-detbox{padding:6px 4px}
+#orderCard .od-detbox table{margin-top:6px;background:#fff}
+#orderCard .od-chartwrap{position:relative;height:280px;margin-top:14px}
+#orderCard .od-free{font-size:10px;font-weight:700;color:#5b34c7;background:#efe9ff;border-radius:4px;padding:1px 5px}
+#orderCard td.empty{text-align:center;color:var(--muted);padding:18px}
+@media(max-width:760px){#orderCard .od-bar label{width:100%}#orderCard .od-bar select{flex:1;max-width:none}}
+#orderCard .od-outlet{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:10px;padding:10px 14px;background:#f3fbf6;border:1px solid #a9dcbf;border-radius:10px;font-size:13px}
+#orderCard .od-outlet>b{font-size:14.5px;color:var(--blue-d)}
+#orderCard .od-alc i{background:#f4a100}

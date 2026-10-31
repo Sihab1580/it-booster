@@ -1,0 +1,40 @@
+/* Closing Stock page — styles scoped to #pageStock, reusing the Sales Update palette */
+#pageStock .sd-head{margin:14px 0 4px;color:var(--muted);font-size:13px}
+#pageStock .sd-head b{color:var(--blue-d)}
+#pageStock .sd-kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:10px}
+#pageStock .sd-sub{font-size:11.5px;color:var(--muted);margin-top:3px}
+#pageStock .sd-bar{margin-top:14px;padding:10px 12px;background:#fafbff;border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;gap:10px}
+#pageStock .sd-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+#pageStock .sd-lab{font-weight:600;font-size:13px;margin-right:4px}
+#pageStock .sd-grp{display:flex;gap:4px;background:#eef1ff;border-radius:10px;padding:3px}
+#pageStock .sd-tg{border:none;background:transparent;font-weight:600;color:var(--muted);padding:6px 12px}
+#pageStock .sd-tg.on{background:#fff;color:var(--blue-d);box-shadow:0 1px 3px rgba(20,35,138,.15)}
+#pageStock .sd-spacer{margin-left:auto}
+#pageStock .sd-chips{display:flex;gap:8px;flex-wrap:wrap}
+#pageStock .sd-chip{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:5px 12px 5px 6px;font-weight:600;font-size:12.5px;border:1.5px solid var(--line)}
+#pageStock .sd-chip img{width:22px;height:22px;border-radius:50%}
+#pageStock .sd-chip:first-child{padding-left:12px}
+#pageStock .sd-chip.on{border-color:var(--blue);background:#eef1ff;color:var(--blue-d)}
+#pageStock .sd-chip.nobu{border-style:dashed;color:#5b34c7;padding-left:12px}
+#pageStock .sd-scope{margin-top:12px;display:flex;align-items:center;gap:10px;background:#eef1ff;border:1px solid #c9d1f7;border-radius:10px;padding:8px 12px;font-size:13px;color:var(--blue-d)}
+#pageStock .sd-scope button{margin-left:auto;padding:4px 10px}
+#pageStock .sd-chartwrap{position:relative;height:260px;max-width:520px;margin:6px auto 0}
+#pageStock .sd-sectionhead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap}
+#pageStock .sd-hint{font-size:12px;color:var(--muted)}
+#pageStock .sd-name{display:flex;align-items:center;gap:9px}
+#pageStock .sd-name img{width:24px;height:24px;border-radius:50%;flex:none}
+#pageStock .sd-sw{width:24px;height:24px;border-radius:50%;flex:none;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:10px}
+#pageStock .sd-nobu{font-size:10px;font-weight:700;color:#5b34c7;background:#efe9ff;border-radius:4px;padding:1px 5px;margin-left:6px}
+#pageStock tr.sd-click{cursor:pointer}
+#pageStock tr.sd-dim td{background:#fbfaf5;color:#5e6478}
+#pageStock tr.sd-tot td{font-weight:700;background:#e9ecfa;border-top:2px solid var(--blue)}
+#pageStock td.sd-val{font-weight:700;color:var(--blue-d)}
+#pageStock tr.sd-zero td{background:#fff5f5}
+#pageStock #sdSku th[data-k]{cursor:pointer}
+#pageStock .sd-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#pageStock .sd-tools input[type=text]{font:inherit;padding:7px 10px;border:1px solid #c8cee0;border-radius:8px;width:220px}
+#pageStock .sd-pager{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:12.5px;color:var(--muted)}
+#pageStock .sd-pager div{display:flex;gap:6px}
+#pageStock .sd-zerobar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+#pageStock .sd-imp{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+#pageStock .sd-impdet{margin-top:10px}

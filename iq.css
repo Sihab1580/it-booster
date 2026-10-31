@@ -1,0 +1,24 @@
+/* IQ page — scoped to #iqCard */
+#iqCard .iq-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+#iqCard .iq-head h2{margin:0;display:flex;align-items:center;gap:8px}
+#iqCard #iqMeta{font-size:13px;color:var(--muted)}
+#iqCard #iqMeta b{color:var(--blue-d)}
+#iqCard .iq-bar{display:flex;gap:12px;align-items:center;margin-top:12px;padding:10px 12px;background:#fafbff;border:1px solid var(--line);border-radius:10px}
+#iqCard .iq-bar label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:13px}
+#iqCard .iq-bar select{font:inherit;padding:6px 9px;border:1px solid #c8cee0;border-radius:8px;background:#fff}
+#iqCard .iq-kpis{margin-top:12px}
+#iqCard .iq-tools{display:flex;align-items:center;gap:10px;margin-top:18px}
+#iqCard .iq-spacer{flex:1}
+#iqCard th.iq-sort{cursor:pointer;user-select:none}
+#iqCard th.iq-sort:hover{background:#e3e8ff}
+#iqCard th.iq-sort::after{content:"⇅";margin-left:4px;opacity:.35;font-size:10px}
+#iqCard th.iq-sort.asc::after{content:"▲";opacity:1;color:var(--blue)}
+#iqCard th.iq-sort.desc::after{content:"▼";opacity:1;color:var(--blue)}
+#iqCard td.iq-val{font-weight:700;color:var(--blue-d)}
+#iqCard .muted{color:var(--muted);font-size:11.5px}
+#iqCard .iq-tbl td:first-child{white-space:normal}
+#iqCard .iq-pc{font-weight:700;border-radius:999px;padding:1px 8px;font-size:12px}
+#iqCard .iq-pc.g{background:var(--ok-bg);color:var(--ok)}
+#iqCard .iq-pc.a{background:var(--warn-bg);color:var(--warn)}
+#iqCard .iq-pc.r{background:var(--err-bg);color:var(--err)}
+#iqCard .iq-over{color:var(--ok);font-weight:700}
