@@ -123,6 +123,7 @@
           <button class="ag-primary" id="agTrackBtn" type="submit">Check status</button>
         </form>
       </div>
+      <a class="ag-memo" href="memo-skipper.html">Open Memo Skipper <small>(no login needed)</small></a>
       <div class="ag-copy">© IT BOOSTER</div></div>`;
     document.body.insertBefore(g, document.body.firstChild);
     return g;

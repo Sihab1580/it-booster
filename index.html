@@ -17,7 +17,7 @@
 <script src="engine.js?v=20261019b"></script>
 <script src="targets.js?v=20261019b"></script>
 <script src="cloud.js?v=20261019b"></script>
-<script src="auth.js?v=1"></script>
+<script src="auth.js?v=2"></script>
 <script src="chart.min.js"></script>
 <script src="stock.js?v=20261019b"></script>
 <script src="order.js?v=20261019b"></script>
@@ -220,8 +220,8 @@
 <link rel="stylesheet" href="table-premium.css?v=20261019h">
 <script src="table-premium.js?v=20261019h" defer></script>
 <script src="table-picture.js?v=1" defer></script>
-<link rel="stylesheet" href="itbooster.css?v=1">
-<link rel="stylesheet" href="auth.css?v=1">
+<link rel="stylesheet" href="itbooster.css?v=2">
+<link rel="stylesheet" href="auth.css?v=2">
 </head>
 <body class="mv itb-locked">
 <header class="topbar">
@@ -250,6 +250,9 @@
     <div class="nav-item">
       <button class="nav-btn" id="navIq" type="button"><svg class="nic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13l4 4L20 5"/><path d="M4 6h7M4 20h16"/></svg>IQ</button>
     </div>
+    <div class="nav-item">
+      <a class="nav-btn" id="navMemo" href="memo-skipper.html" target="_blank" rel="noopener"><svg class="nic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>Memo Skipper</a>
+    </div>
   </nav>
   <div class="top-actions">
     <button id="menuBtn" class="menu-btn hidden">☰ Details<i id="menuDot" class="dot hidden"></i></button>
@@ -267,6 +270,7 @@
     </div>
     <div id="viewMsg" class="alert hidden"></div>
     <div class="new-upload">New town or first upload? <a id="openUpload">Upload data →</a></div>
+    <div class="new-upload">Printing memos? <a href="memo-skipper.html" target="_blank" rel="noopener">Open Memo Skipper →</a></div>
   </section>
 
   <section class="card banner hidden" id="viewBanner"><div id="bannerText"></div><button id="closeView">Close</button></section>

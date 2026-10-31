@@ -114,3 +114,9 @@ body.adm{margin:0;background:#F3F7FD;color:#0F1F3D;font-family:'Plus Jakarta San
 .adm-cred pre{margin:0;background:#fff;border:1px solid #A7F3D0;border-radius:10px;padding:10px 12px;font:600 13px/1.5 Consolas,monospace;color:#0F1F3D;white-space:pre-wrap;word-break:break-all}
 .adm-cred-b{display:flex;flex-direction:column;gap:8px;min-width:150px}.adm-cred-b .ag-primary{padding:9px 14px;font-size:13.5px}
 @media(max-width:700px){.adm-top{padding:10px 12px}.adm-tabs{order:3;flex-basis:100%;overflow-x:auto}.adm-who{display:none}}
+
+/* ---- Memo Skipper shortcut on the login screen ---- */
+.ag-memo{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;padding:12px 16px;border-radius:14px;text-decoration:none;font-weight:800;font-size:14px;
+  color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);transition:.15s}
+.ag-memo small{font-weight:600;color:#CFE0FF}
+.ag-memo:hover{background:rgba(255,255,255,.24)}
